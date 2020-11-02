@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to bottom, #af67e9, #6565e7);
+    background-repeat: no-repeat;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;   
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: .75rem;
+    font-weight: 400;
+    color: hsl(238, 29%, 16%); 
+}
+
+.desktop-image{
+    width:50%;
+}
+
+.mobile,.background{
+    display: none;
+}
+
+.list{
+    font-size: 1.25rem;
+    padding: 1rem;
+}
+
+h1{
+    padding: 10%;
+}
+
+hr{
+    line-height: 2rem;
+    color: #e7e7e9;
+    border-top: .5px solid;
+}
+
+.question{  
+    font-size: 1rem;
+    margin: 1.2rem auto 1.2rem auto;
+    padding-right: 1.5rem;
+
+}
+
+.question:hover{
+    color: #f47c57;
+    cursor: pointer;
+}
+
+.answer{
+    display: none;
+    margin-top: 0.6rem;
+    color: #444;
+    font-size: .875rem;
+    margin-bottom: 1rem;
+}
+
+.down-arrow {
+    height: 0.5rem;
+    width: auto;
+    transition: all 0.25s ease 0s;
+    position: absolute;
+    right: 1rem;
+}
+
+
+@media screen and (min-width: 1023px){
+    .card{
+    background: white;
+    color: hsl(237, 12%, 33%);
+    width: 60%;
+    height: 70%;
+    border-radius: 30px;
+    position: absolute;
+    left: 20%;
+    top: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+    }
+    .background{
+        display: block;
+        width: 80%;
+        position: absolute;
+        left: -35%;
+        bottom: -10%;
+        overflow: hidden;
+    }
+    .list{
+        width: 50%;
+    }
+    .desktop{
+        width: 50%;
+        position: absolute;
+        left: -50px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .box{
+        position: relative;
+        z-index: 1;
+        width: 60%;
+        left: -6rem;
+        top: -9rem;
+        margin-top: 15rem;
+    }
+    .attribution{
+        padding: 12%;
+        margin-bottom: -30%;
+    }
+}
+    
+
+
+@media screen and (max-width: 1023px){
+    .mobile{
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        margin-top: -12%;
+        align-items: center;
+    }
+    .desktop,.box{
+        display: none;
+    }
+    .card{
+        position: relative;
+        max-width: 80%;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 30px;   
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5%; 
+        margin-top: 10%;
+    }
+    h1{
+        text-align: center;
+    }
+
+}
